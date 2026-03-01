@@ -1,0 +1,161 @@
+/* ==========================================
+   RESPONSIVE BREAKPOINTS
+   ========================================== */
+
+/* Tablet and up (768px+) */
+@media (min-width: 768px) {
+    .about-section {
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+    }
+    
+    .contact-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+    }
+    
+    .galaxy-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .mobile-menu-btn {
+        display: none;
+    }
+    
+    .nav-menu {
+        display: flex;
+    }
+}
+
+/* Desktop and up (992px+) */
+@media (min-width: 992px) {
+    .galaxy-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .about-section {
+        gap: 100px;
+    }
+    
+    .contact-container {
+        gap: 100px;
+    }
+}
+
+/* Large Desktop (1200px+) */
+@media (min-width: 1200px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+/* Small Mobile (480px and below) */
+@media (max-width: 480px) {
+    .section {
+        padding: 80px 4%;
+    }
+    
+    .hero-section {
+        padding: 80px 4%;
+    }
+    
+    .hero-cta {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .cta-button {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .galaxy-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .constellation-container {
+        height: 400px;
+    }
+    
+    .profile-container {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .profile-core {
+        font-size: 60px;
+    }
+    
+    .project-card {
+        padding: 20px;
+    }
+    
+    .contact-link {
+        padding: 15px;
+    }
+    
+    .contact-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+    
+    .section-label::before,
+    .section-label::after {
+        display: none;
+    }
+}
+
+/* Medium Mobile (481px - 767px) */
+@media (min-width: 481px) and (max-width: 767px) {
+    .galaxy-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Tablet (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .galaxy-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Reduce Motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* High DPI Screens */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .cursor-circle {
+        border-width: 1px;
+    }
+}
+
+/* Landscape Mode on Mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero-section {
+        min-height: auto;
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+    
+    .scroll-indicator {
+        display: none;
+    }
+}

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galaxy | Developed by Jeevandeep K</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Space+Grotesk:wght@300;400;500;600;700&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- External Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/cursor.css">
+    <link rel="stylesheet" href="css/universe.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- EmailJS SDK -->
+        <!-- EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    
+    <!-- Scripts -->
+    <script src="js/projects.js"></script>
+</head>
+<body>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-container">
+        <div class="cursor-glow"></div>
+        <div class="cursor-trail"></div>
+        <div class="cursor-circle"></div>
+        <div class="cursor-dot"></div>
+        <div class="cursor-text">View</div>
+    </div>
+
+    <!-- Navigation Progress -->
+    <div class="nav-progress"></div>
+
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <div class="loader-ring"></div>
+            <div class="loader-ring"></div>
+            <div class="loader-ring"></div>
+            <div class="loader-core"></div>
+        </div>
+        <div class="loader-text">Initializing Galaxy...</div>
+    </div>
+
+    <!-- Three.js Universe Background -->
+    <canvas id="universe-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="nav-container">
+        <a href="#" class="logo glitch" data-text="GALAXY">GALAXY</a>
+        
+        <ul class="nav-menu" style="font-weight: bold; color: #ffffff;">
+            <li><a href="#home" class="nav-link magnetic" >Home</a></li>
+            <li><a href="#about" class="nav-link magnetic">About</a></li>
+            <li><a href="#projects" class="nav-link magnetic">Projects</a></li>
+            <li><a href="#skills" class="nav-link magnetic">Skills</a></li>
+            <li><a href="#contact" class="nav-link magnetic">Contact</a></li>
+        </ul>
+
+        <div class="mobile-menu-btn magnetic" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="close-menu" onclick="toggleMenu()">×</div>
+        <a href="#home" class="nav-link" onclick="toggleMenu()">Home</a>
+        <a href="#about" class="nav-link" onclick="toggleMenu()">About</a>
+        <a href="#projects" class="nav-link" onclick="toggleMenu()">Projects</a>
+        <a href="#skills" class="nav-link" onclick="toggleMenu()">Skills</a>
+        <a href="#contact" class="nav-link" onclick="toggleMenu()">Contact</a>
+    </div>
+
+    <!-- Main Content -->
+    <main class="content-wrapper">
+
+        <!-- Hero Section -->
+        <section class="hero-section" id="home">
+            <div class="hero-visual">
+                <div class="floating-object planet-1"></div>
+                <div class="floating-object planet-2"></div>
+                <div class="floating-object planet-3"></div>
+            </div>
+
+            <div class="hero-content">
+                <div class="hero-badge">30 Project Challenge</div>
+                <h1 class="hero-title">Galaxy of<br>Self Development</h1>
+                <p class="hero-subtitle">Developed by Jeevandeep K</p>
+                <p class="hero-description">
+                    A journey through 30 immersive projects exploring the boundaries of creative development, 
+                    3D web experiences, and interactive storytelling.
+                </p>
+                <div class="hero-cta">
+                    <a href="#projects" class="cta-button primary magnetic">Explore Projects</a>
+                    <a href="#contact" class="cta-button magnetic">Get In Touch</a>
+                </div>
+            </div>
+
+            <div class="scroll-indicator">
+                <span class="scroll-text">Scroll to Explore</span>
+                <div class="scroll-line"></div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="section" id="about">
+            <div class="section-header">
+                <div class="section-label">About Me</div>
+                <h2 class="section-title">The Architect of Galaxy</h2>
+            </div>
+
+            <div class="about-section">
+                <div class="about-visual">
+                    <a href="https://www.linkedin.com/in/jeevandeep-k">
+                        <div class="profile-container">
+                            <div class="profile-ring"></div>
+                            <div class="profile-ring"></div>
+                            <div class="profile-ring"></div>
+                            <div class="profile-core">     
+                                <img src="assets/profile.jpg" alt="Jeevandeep K" class="profile-image">                       
+                            </div>
+
+                        </div>
+                    </a>
+                    
+                </div>
+                <div class="about-content">
+                    <h2>Crafting Digital Universes</h2>
+                    <p>
+                        I'm Jeevandeep K, a creative developer passionate about building immersive web experiences 
+                        that push the boundaries of what's possible in the browser.
+                    </p>
+                    <p>
+                        Through this 30 Project Challenge, I've explored everything from 3D visualizations to 
+                        interactive storytelling, combining technical mastery with creative vision.
+                    </p>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-value">30</div>
+                            <div class="stat-label">Projects</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">∞</div>
+                            <div class="stat-label">Creativity</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">100%</div>
+                            <div class="stat-label">Passion</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="section projects-section" id="projects">
+            <div class="section-header">
+                <div class="section-label">Featured Work</div>
+                <h2 class="section-title">Project Galaxy</h2>
+            </div>
+            <div class="galaxy-grid" id="galaxyGrid"></div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="section skills-section" id="skills">
+            <div class="section-header">
+                <div class="section-label">Expertise</div>
+                <h2 class="section-title">Skill Constellation</h2>
+            </div>
+            <div class="constellation-container">
+                <svg class="constellation-svg" viewBox="0 0 1000 600" id="constellationSvg"></svg>
+            </div>
+        </section>
+
+        
+        <!-- Contact Section -->
+        <section class="section contact-section" id="contact">
+            <div class="section-header" >
+                <div class="section-label">Connect</div>
+                <h2 class="section-title ">Start a Conversation</h2>
+            </div>
+
+            
+                
+            
+            <div class="contact-container ">
+                
+                <div class="contact-info ">
+                    <h2 style="font-size: 28px; font-weight: bold;">Let's Create Something Extraordinary</h2>
+                    <p style="font-size: 18px;">I'm always open to new connections and collaborations. Let's build the next star in this galaxy together.</p>
+                    
+                    <div class="container contact-links " >
+                        
+                        <a href="https://www.linkedin.com/in/jeevandeep-k" class="contact-link magnetic" target="_blank">
+                            <div class="contact-icon">💼</div>
+                            <div class="contact-details">
+                                <h4>LinkedIn</h4>
+                                <p>linkedin.com/in/jeevandeep-k</p>
+                            </div>
+                        </a>
+
+                        <a href="mailto:jeevandeepk260@gmail.com" class="contact-link magnetic" target="_blank">
+                            <div class="contact-icon">✉️</div>
+                            <div class="contact-details">
+                                <h4>Email</h4>
+                                <p>jeevandeepk260@gmail.com</p>
+                            </div>
+                        </a>
+                        
+                        <a href="https://github.com/Jeevandeep2" class="contact-link magnetic" target="_blank">
+                            <div class="contact-icon">🐙</div>
+                            <div class="contact-details">
+                                <h4>GitHub</h4>
+                                <p>github.com/Jeevandeep2</p>
+                            </div>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+
+                <form class="contact-form"  onsubmit="handleSubmit(event)">
+                    <div class="form-group">
+                        <input type="text" class="form-input" id="name" placeholder=" " required>
+                        <label class="form-label" for="name">Your Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-input " id="email" placeholder=" " required>
+                        <label class="form-label" for="email">Your Email</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-input " id="profession" placeholder=" " required>
+                        <label class="form-label" for="profession">Your Profession</label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea class="form-input form-textarea" id="message" placeholder=" " required></textarea>
+                        <label class="form-label" for="message">Your Message and Feedback</label>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn magnetic">Send Transmission →</button>
+                </form>
+                
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-logo">GALAXY</div>
+
+                <p class="footer-text" style="color: #ffffff; font-weight: bold;">
+                    ©2026 Developed by <span class="footer-heart">♥</span> Jeevandeep K <span class="footer-heart">♥</span><br>
+                    All Rights Reserved. Journey Through the Stars.
+                </p>
+
+                <!-- Social Media Icons -->
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/jeevandeep-k" target="_blank" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:jeevandeepk260@gmail.com" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://github.com/Jeevandeep2" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://instagram.com/jeevandeepk260" target="_blank" class="social-link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://chat.whatsapp.com/FV5y9Q8FU2sAlTtAO51yaI" target="_blank" class="social-link">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- Scripts -->
+    <script src="js/projects.js"></script>
+    <script src="js/cursor.js"></script>
+    <script src="js/universe.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>
