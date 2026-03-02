@@ -215,13 +215,51 @@ const projectsData = [
     }
 ];
 
+
+
 // Skills data for constellation
 const skillsData = [
-    { name: 'React', icon: '⚛️', x: 150, y: 300 },
-    { name: 'Three.js', icon: '🎨', x: 400, y: 150 },
-    { name: 'Node.js', icon: '📦', x: 650, y: 200 },
-    { name: 'HTML', icon: '🎬', x: 850, y: 350 },
-    { name: 'CSS', icon: '🔷', x: 300, y: 450 },
-    { name: 'JavaScript', icon: '📘', x: 600, y: 450 },
-    { name: 'Next.js', icon: '▲', x: 500, y: 300 }
+    { 
+        name: 'React', 
+        icon: '⚛️', 
+        x: 150, y: 300,
+        docLink: 'https://react.dev',
+        URL: 'https://react.dev',
+    },
+    { 
+        name: 'Three.js', 
+        icon: '🎨', 
+        x: 400, y: 150,
+        docLink: 'https://threejs.org/docs'
+    },
+    { 
+        name: 'Node.js', 
+        icon: '🟢', 
+        x: 650, y: 200,
+        docLink: 'https://nodejs.org/docs/latest/api/'
+    },
+    { 
+        name: 'HTML', 
+        icon: '📄', 
+        x: 850, y: 350,
+        docLink: 'https://developer.mozilla.org/en-US/docs/Web/HTML'
+    },
+    { 
+        name: 'CSS', 
+        icon: '🎨', 
+        x: 300, y: 450,
+        docLink: 'https://developer.mozilla.org/en-US/docs/Web/CSS'
+    },
+    { 
+        name: 'JavaScript', 
+        icon: '⚡', 
+        x: 600, y: 450,
+        docLink: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript'
+    },
+    { 
+        name: 'Next.js', 
+        icon: '▲', 
+        x: 500, y: 300,
+        docLink: 'https://nextjs.org/docs'
+    }
 ];
